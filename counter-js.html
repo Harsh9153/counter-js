@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+
+box-sizing: border-box;
+
+margin: 0px;
+
+padding: 0px;
+}
+.container{
+
+height: 100vh;
+
+width: 100vw;
+
+display: flex;
+
+flex-direction: column;
+
+justify-content: center;
+
+align-items: center;
+}
+
+.container h1{
+
+margin: 30px;
+}
+
+.counter{
+
+width: 30%;
+
+display: flex;
+
+justify-content: center;
+}
+
+#increment, #decrement, #reset{
+
+height: 50px;
+
+width: 120px;
+
+padding: 0 30px;
+
+border-radius: 10px;
+
+font-size: 40px;
+
+background-color: #aad829;
+
+border: 2px solid #94e217;
+
+color: rgb(185, 35, 70);
+
+margin: 20px;
+}
+#reset{
+
+font-size: 20px;
+}
+#counter{
+
+height: 50px;
+
+min-width: 120px;
+
+border-radius: 10px;
+
+background-color: rgba(255, 0, 0, 0.657);
+
+margin-top: 20px;
+
+font-size: 30px;
+
+display: flex;
+
+justify-content: center;
+
+align-items: center;
+color: #11cbf0;
+}
+</style>
+<body>
+  <div class="container">
+
+    <h1>Counter-js</h1>
+
+    <div class="counter">
+
+        <button id="increment">+</button>
+
+        <div id="counter">0</div>
+
+        <button id="decrement">-</button>
+
+    </div>
+
+    <button id="reset">Reset</button>
+
+</div>
+
+
+<script>
+  let counter = 0;
+ 
+
+ const counterValue = document.getElementById('counter');
+ 
+ const incrementBtn = document.getElementById('increment');
+ 
+ const decrementBtn = document.getElementById('decrement');
+ 
+ const resetBtn = document.querySelector('#reset');
+  
+ // To increment the value of counter
+ 
+ increment.addEventListener('click', () => {
+ 
+     counter++;
+ 
+     counterValue.innerHTML = counter;
+ });
+  
+ decrement.addEventListener('click', () => {
+ 
+     counter--;
+ 
+     counterValue.innerHTML = counter;
+ });
+  
+ 
+ reset.addEventListener('click', reset);
+  
+ 
+reset.addEventListener('click', () => {
+ 
+ counter=0;
+
+ counterValue.innerHTML = counter;
+});
+</script>
+ 
+</body>
+</html>
